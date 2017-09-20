@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+@model MVC4.Models.Employee
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MyView</title>
+</head>
+<body>
+    <div>
+        @{
+            MVC4.Models.Employee emp = (MVC4.Models.Employee)
+                ViewData["Employee"];
+        }
+
+        <b>Employee Details </b><br />
+        Employee Name : @model.salary <br />
+        Employee Salary: @emp.Salary.ToString("C")
+    </div>
+</body>
